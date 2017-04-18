@@ -33,7 +33,10 @@ void show_help(){
 }
 
 void listen_print(char * device){
-
+	// 	// open  a packet handle in promiscuous mode
+		// 	pcap_t* handle;
+		// 	char *  errbuff;
+		// 	handle  =  pcap_open_live((*(argv+1)), MAXSIZE, 1, 1000, errbuf);
 }
 
 
@@ -58,16 +61,6 @@ int main (int argc, char *argv[]){
 			show_help();
 		}
 		// if(!strcmp((*(argv+1)),"-c")){
-		// 	// open  a packet handle in promiscuous mode
-		// 	pcap_t* handle;
-		// 	char *  errbuff;
-		// 	handle  =  pcap_open_live((*(argv+1)), MAXSIZE, 1, 1000, errbuf);
-			
-
-		// }
-
-
-
-	
-
+		
+		// }	
 }
