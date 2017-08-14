@@ -1,3 +1,9 @@
+
+/*
+*Para executar o programa precisa esta logado como root
+
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pcap.h>
@@ -6,6 +12,9 @@
 #define TRUE 1
 #define FALSE 0
 #define SIZEMAX 2048
+
+
+
 
 void print_devices(int ret,  pcap_if_t**iface, char * errbuff){
 
@@ -32,11 +41,8 @@ void show_help(){
 
 }
 
-void listen_print(char * device){
-	// 	// open  a packet handle in promiscuous mode
-		// 	pcap_t* handle;
-		// 	char *  errbuff;
-		// 	handle  =  pcap_open_live((*(argv+1)), MAXSIZE, 1, 1000, errbuf);
+void listen_print(pcap_t* handle){
+	printf("%s\n", handle->);
 }
 
 
@@ -60,7 +66,19 @@ int main (int argc, char *argv[]){
 		if(!strcmp( (*(argv+1)),"-h")){
 			show_help();
 		}
-		// if(!strcmp((*(argv+1)),"-c")){
+		if(!strcmp((*(argv+1)),"-c")){
+
+			// open  a packet handle in promiscuous mode
+			open capture device
+			pcap_t* handle;
+			char *  errbuff;
+			handle  =  pcap_open_live((*(argv+1)), MAXSIZE, 1, 1000, errbuf);
 		
-		// }	
+
+			if(handle == NULL){
+				fprintf(stderr, "Couldn't open device %s\n",(*(argv+1)) );
+			}
+
+
+
 }
